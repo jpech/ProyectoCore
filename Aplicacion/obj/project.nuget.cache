@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "527YWiydP0ZM6gI2iiGQljHZmR6UnjsiqNL37PwSYKV9+cADuBtQ1Nd6MH/ejqBonyuZRPwgsjV/rDVOlSwBIw==",
+  "dgSpecHash": "jMY8ZPNNveM6X/RonMpK+LCvQ92xBfK1wiogdRwbUWqLSsphcGiRheaUecaKZjd3p6lyC62+JVj/E01onx6w0A==",
   "success": true,
   "projectFilePath": "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Julian Pech Pacheco\\.nuget\\packages\\automapper\\8.1.1\\automapper.8.1.1.nupkg.sha512",
+    "C:\\Users\\Julian Pech Pacheco\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\6.1.1\\automapper.extensions.microsoft.dependencyinjection.6.1.1.nupkg.sha512",
     "C:\\Users\\Julian Pech Pacheco\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
     "C:\\Users\\Julian Pech Pacheco\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.6.2\\fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
     "C:\\Users\\Julian Pech Pacheco\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\8.6.2\\fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",

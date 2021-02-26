@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Dominio;
@@ -18,6 +19,8 @@ namespace Aplicacion.Cursos
             public string Descripcion { get; set; }
 
             public DateTime? FechaPublicacion { get; set; }
+
+            public List<Guid> ListaInstructor { get; set; }
         }
 
         public class EjecutaValidation : AbstractValidator<Ejecuta>
@@ -27,6 +30,7 @@ namespace Aplicacion.Cursos
                 RuleFor(x => x.Titulo).NotEmpty();
                 RuleFor(x => x.Descripcion).NotEmpty();
                 RuleFor(x => x.FechaPublicacion).NotEmpty();
+                RuleFor(x => x.ListaInstructor).NotEmpty();
             }
         }
 
@@ -40,12 +44,25 @@ namespace Aplicacion.Cursos
 
             public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
+                Guid _cursoId = Guid.NewGuid();
                 var curso = new Curso
                 {
+                    CursoId = _cursoId,
                     Titulo = request.Titulo,
                     Descripcion = request.Descripcion,
                     FechaPublicacion = request.FechaPublicacion
                 };
+
+                if(request.ListaInstructor != null){
+                    foreach (var item in request.ListaInstructor){
+                        var cursoInstructor = new CursoInstructor{
+                            CursoId = curso.CursoId,
+                            InstructorId = item
+                        };
+
+                        context.CursoInstructor.Add(cursoInstructor);
+                    }
+                }
 
                 context.Curso.Add(curso);
                 var valor = await context.SaveChangesAsync();
