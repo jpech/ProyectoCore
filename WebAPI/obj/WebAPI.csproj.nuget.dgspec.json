@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ProyectoCore\\WebAPI\\WebAPI.csproj": {}
+    "C:\\ProyectoCore\\WebAPi\\WebAPI.csproj": {}
   },
   "projects": {
     "C:\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
@@ -287,14 +287,14 @@
         }
       }
     },
-    "C:\\ProyectoCore\\WebAPI\\WebAPI.csproj": {
+    "C:\\ProyectoCore\\WebAPi\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ProyectoCore\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\ProyectoCore\\WebAPi\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\ProyectoCore\\WebAPI\\WebAPI.csproj",
+        "projectPath": "C:\\ProyectoCore\\WebAPi\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\Julian Pech Pacheco\\.nuget\\packages\\",
-        "outputPath": "C:\\ProyectoCore\\WebAPI\\obj\\",
+        "outputPath": "C:\\ProyectoCore\\WebAPi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Julian Pech Pacheco\\AppData\\Roaming\\NuGet\\NuGet.Config",

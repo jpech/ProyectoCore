@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace Aplicacion.Cursos
     {
         public class Ejecuta : IRequest 
         {
-            public int CursoId { get; set; }
+            public Guid CursoId { get; set; }
         }
 
         public class Manejador : IRequestHandler<Ejecuta>
@@ -24,8 +25,14 @@ namespace Aplicacion.Cursos
             }
             public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
+                var instructoresBd = context.CursoInstructor.Where(w => w.CursoId == request.CursoId).ToList();
+                if(instructoresBd != null && instructoresBd.Any()){
+                    foreach(var instructorBd in instructoresBd){
+                        context.CursoInstructor.Remove(instructorBd);
+                    }
+                }
+
                 var curso = await context.Curso.FindAsync(request.CursoId);
-                
                 if(curso == null)
                 {
                     throw new ManejadorException(HttpStatusCode.NotFound, new {mensaje = "No se encontró el curso."});

@@ -28,6 +28,8 @@ namespace Aplicacion.Cursos
             public async Task<List<CursoDTO>> Handle(ListaCursos request, CancellationToken cancellationToken)
             {
                 var cursos = await context.Curso
+                             .Include(x => x.ComentarioLista)
+                             .Include(x => x.PrecioPromocion)
                              .Include(x => x.InstructoresLink)
                              .ThenInclude(x => x.Instructor).ToListAsync();
 

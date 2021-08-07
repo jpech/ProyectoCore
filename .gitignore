@@ -1,2 +1,12 @@
 bin/
 .dll
+Aplicacion/bin/Debug
+Aplicacion/obj/Debug
+Dominio/bin/Debug
+Dominio/obj/Debug
+Persistencia/bin/Debug
+Persistencia/obj/Debug
+Seguridad/bin/Debug
+Seguridad/obj/Debug
+WebApi/bin/Debug
+WebApi/obj/Debug
